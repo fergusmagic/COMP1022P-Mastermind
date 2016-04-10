@@ -82,17 +82,17 @@ public class MastermindWorld extends GWorld
                 removeObjectsFromWorld(getAllObjectsAt(i, f, "Balloon"));
     }}
 
-    public static boolean hasSomePeg(int x, int y)
+    public boolean hasSomePeg(int x, int y)
     {
         //part 1
-                for(int i = 0; i < 4; i++)
-                for(int f = 0; f < 8; f++){
-                    if(MastermindWorld.getOneObjectAt(i, f, "GreenPeg") != null) {return  true;} ;
-               else if(MastermindWorld.getOneObjectAt(i, f, "BluePeg") != null) {return  true;} ;
-               else if(MastermindWorld.getOneObjectAt(i, f, "RedPeg") != null) {return  true;} ;
-               else if(MastermindWorld.getOneObjectAt(i, f, "PurplePeg") != null) {return  true;} ;
-        {else return  false;} ;
-    }}
+        int i=x;
+        int f=y;
+                    if(MastermindWorld.getOneObjectAt(i, f, "GreenPeg") != null) {return  true;} 
+               else if(MastermindWorld.getOneObjectAt(i, f, "BluePeg") != null) {return  true;} 
+               else if(MastermindWorld.getOneObjectAt(i, f, "RedPeg") != null) {return  true;} 
+               else if(MastermindWorld.getOneObjectAt(i, f, "PurplePeg") != null) {return  true;} 
+        else {return  false;}
+    }
     
     public static boolean isRowComplete(int row)
     {
