@@ -107,11 +107,18 @@ public class MastermindWorld extends GWorld
         return true; //you should remove this line as you add your own implementation for this method
     }
 
-    public static int getLatestRow()
+    public int getLatestRow()
     {
         //part 1
-        
-        return 0; //you should remove this line as you add your own implementation for this method
+        for (int i = this.getHeight(); i >= 0; i--)
+        {
+            //System.out.println("checking row " + i);
+            if (this.isRowComplete(i))
+            {
+                return i;
+            }
+        }
+        return -1; //you should remove this line as you add your own implementation for this method
     }
 
     public void saveGame() throws Exception
