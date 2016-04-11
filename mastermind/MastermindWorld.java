@@ -94,11 +94,17 @@ public class MastermindWorld extends GWorld
         else {return  false;}
     }
     
-    public static boolean isRowComplete(int row)
+    public boolean isRowComplete(int row)
     {
         //part 1
-        
-        return false; //you should remove this line as you add your own implementation for this method
+        for (int i = 0; i!=4; i++)
+        {
+            if (!hasSomePeg(i, row))
+            {
+                return false;
+            }
+        }
+        return true; //you should remove this line as you add your own implementation for this method
     }
 
     public static int getLatestRow()
