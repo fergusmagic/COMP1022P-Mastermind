@@ -47,15 +47,15 @@ public class MastermindWorld extends GWorld
     {         
         //part 1
       
-                MastermindWorld.addObject(MastermindWorld.JUDGE, 0, 9);
-                MastermindWorld.addObject(MastermindWorld.NICE_JUDGE, 1, 9);
-                MastermindWorld.addObject(MastermindWorld.FRIEND_JUDGE, 2, 9);
-                MastermindWorld.addObject(MastermindWorld.NAUGHTY_GUY, 5, 9);
+                this.addObject(MastermindWorld.JUDGE, 0, 9);
+                this.addObject(MastermindWorld.NICE_JUDGE, 1, 9);
+                this.addObject(MastermindWorld.FRIEND_JUDGE, 2, 9);
+                this.addObject(MastermindWorld.NAUGHTY_GUY, 5, 9);
                 for(int i = 0; i < 9; i++) {
-                MastermindWorld.addObject(MastermindWorld.WALL,i, 8);
+                this.addObject(MastermindWorld.WALL,i, 8);
             }
                 for(int i = 0; i < 10; i++) {
-                MastermindWorld.addObject(MastermindWorld.WALL,4 ,i);    
+                this.addObject(MastermindWorld.WALL,4 ,i);    
             }
 }
     
@@ -87,10 +87,10 @@ public class MastermindWorld extends GWorld
         //part 1
         int i=x;
         int f=y;
-                    if(MastermindWorld.getOneObjectAt(i, f, "GreenPeg") != null) {return  true;} 
-               else if(MastermindWorld.getOneObjectAt(i, f, "BluePeg") != null) {return  true;} 
-               else if(MastermindWorld.getOneObjectAt(i, f, "RedPeg") != null) {return  true;} 
-               else if(MastermindWorld.getOneObjectAt(i, f, "PurplePeg") != null) {return  true;} 
+                    if(this.getOneObjectAt(i, f, "GreenPeg") != null) {return  true;} 
+               else if(this.getOneObjectAt(i, f, "BluePeg") != null) {return  true;} 
+               else if(this.getOneObjectAt(i, f, "RedPeg") != null) {return  true;} 
+               else if(this.getOneObjectAt(i, f, "PurplePeg") != null) {return  true;} 
         else {return  false;}
     }
     
