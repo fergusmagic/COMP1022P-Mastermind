@@ -16,4 +16,8 @@ public class RedPeg extends Peg
     {
         // Add your action code here.
     }    
+    
+    public RedPeg() {
+        super('R');
+    } 
 }

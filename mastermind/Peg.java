@@ -16,5 +16,10 @@ public class Peg extends Actor
     {
         // Add your action code here.
     }   
+    public char color;
+    
+    public Peg(char color) {
+        this.color = color;
+    }
 } 
 

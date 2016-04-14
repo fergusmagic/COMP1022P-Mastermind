@@ -43,19 +43,21 @@ public class MastermindWorld extends GWorld
         generateSecret(); 
     }
     
+    
+    
     public void initialize()
     {         
         //part 1
       
-                this.addObject(MastermindWorld.JUDGE, 0, 9);
-                this.addObject(MastermindWorld.NICE_JUDGE, 1, 9);
-                this.addObject(MastermindWorld.FRIEND_JUDGE, 2, 9);
-                this.addObject(MastermindWorld.NAUGHTY_GUY, 5, 9);
+                MastermindWorld.addObject(MastermindWorld.JUDGE, 0, 9);
+                MastermindWorld.addObject(MastermindWorld.NICE_JUDGE, 1, 9);
+                MastermindWorld.addObject(MastermindWorld.FRIEND_JUDGE, 2, 9);
+                MastermindWorld.addObject(MastermindWorld.NAUGHTY_GUY, 5, 9);
                 for(int i = 0; i < 9; i++) {
-                this.addObject(MastermindWorld.WALL,i, 8);
+                MastermindWorld.addObject(MastermindWorld.WALL,i, 8);
             }
                 for(int i = 0; i < 10; i++) {
-                this.addObject(MastermindWorld.WALL,4 ,i);    
+                MastermindWorld.addObject(MastermindWorld.WALL,4 ,i);    
             }
 }
     
@@ -69,7 +71,7 @@ public class MastermindWorld extends GWorld
                       char c = peg[random.nextInt(peg.length)];
                       color.append(c);
                     }
-                    String secret = color.toString();
+                  secret = color.toString();
                  System.out.println("The secret is " + secret );
                 }
     
@@ -82,19 +84,19 @@ public class MastermindWorld extends GWorld
                 removeObjectsFromWorld(getAllObjectsAt(i, f, "Balloon"));
     }}
 
-    public boolean hasSomePeg(int x, int y)
+    public static boolean hasSomePeg(int x, int y)
     {
         //part 1
         int i=x;
         int f=y;
-                    if(this.getOneObjectAt(i, f, "GreenPeg") != null) {return  true;} 
-               else if(this.getOneObjectAt(i, f, "BluePeg") != null) {return  true;} 
-               else if(this.getOneObjectAt(i, f, "RedPeg") != null) {return  true;} 
-               else if(this.getOneObjectAt(i, f, "PurplePeg") != null) {return  true;} 
+                    if(MastermindWorld.getOneObjectAt(i, f, "GreenPeg") != null) {return  true;} 
+               else if(MastermindWorld.getOneObjectAt(i, f, "BluePeg") != null) {return  true;} 
+               else if(MastermindWorld.getOneObjectAt(i, f, "RedPeg") != null) {return  true;} 
+               else if(MastermindWorld.getOneObjectAt(i, f, "PurplePeg") != null) {return  true;} 
         else {return  false;}
     }
     
-    public boolean isRowComplete(int row)
+    public static boolean isRowComplete(int row)
     {
         //part 1
         for (int i = 0; i!=4; i++)
@@ -107,13 +109,13 @@ public class MastermindWorld extends GWorld
         return true; //you should remove this line as you add your own implementation for this method
     }
 
-    public int getLatestRow()
+    public static int getLatestRow()
     {
         //part 1
-        for (int i = this.getHeight(); i >= 0; i--)
+        for (int i = WORLD_HEIGHT; i >= 0; i--)
         {
             //System.out.println("checking row " + i);
-            if (this.isRowComplete(i))
+            if (MastermindWorld.isRowComplete(i))
             {
                 return i;
             }
@@ -156,7 +158,7 @@ public class MastermindWorld extends GWorld
      * Example:
      * getRandomNumber(1, 10) will return you a random number that is in range of [1, 10] (including 1 and 10).
      */
-    public int getRandomNumber(int lowerBound, int upperBound)
+    private int getRandomNumber(int lowerBound, int upperBound)
     {
         Random randomNumberGenerator = new Random();
         return lowerBound + randomNumberGenerator.nextInt(upperBound - lowerBound + 1);

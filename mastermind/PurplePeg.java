@@ -16,4 +16,8 @@ public class PurplePeg extends Peg
     {
         // Add your action code here.
     }    
+    
+    public PurplePeg() {
+        super('P');
+    }
 }

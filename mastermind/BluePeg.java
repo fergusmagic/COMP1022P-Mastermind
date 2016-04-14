@@ -16,4 +16,8 @@ public class BluePeg extends Peg
     {
         // Add your action code here.
     }    
+    
+   public BluePeg() {
+        super('B');
+    }
 }

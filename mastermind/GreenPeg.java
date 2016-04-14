@@ -16,4 +16,8 @@ public class GreenPeg extends Peg
     {
         // Add your action code here.
     }    
+    
+    public GreenPeg() {
+        super('G');
+    }
 }
