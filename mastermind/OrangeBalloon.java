@@ -10,4 +10,5 @@ public class OrangeBalloon extends Balloon
     {
         // Add your action code here.
     }    
+    public String id = "OrangeBalloon";
 }

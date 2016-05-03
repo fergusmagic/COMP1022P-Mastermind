@@ -148,4 +148,6 @@ public class Judge extends SpecialCharacter
             return a;
         }
     }
+    
+    public String id = "Judge";
 }

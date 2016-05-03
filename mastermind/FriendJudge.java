@@ -88,4 +88,6 @@ public class FriendJudge extends Judge
         }
     }
     
+    public String id = "FriendJudge";
+    
 }

@@ -16,4 +16,6 @@ public class Wall extends Actor
     {
         // Add your action code here.
     }    
+    
+    public String id = "Wall";
 }

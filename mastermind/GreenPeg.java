@@ -20,4 +20,6 @@ public class GreenPeg extends Peg
     public GreenPeg() {
         super('G');
     }
+    
+    public String id = "GreenPeg";
 }

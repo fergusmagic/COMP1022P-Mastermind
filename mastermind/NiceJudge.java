@@ -20,4 +20,6 @@ public class NiceJudge extends Judge
 		    super.placeLeftAlligned(b, row);
 		}
 	}
+	
+	public String id = "Nicejudge";
 }

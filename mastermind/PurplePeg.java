@@ -20,4 +20,6 @@ public class PurplePeg extends Peg
     public PurplePeg() {
         super('P');
     }
+    
+    public String id = "PurplePeg";
 }

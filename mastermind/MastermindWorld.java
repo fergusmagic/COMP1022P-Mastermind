@@ -126,15 +126,30 @@ public class MastermindWorld extends GWorld
     public void saveGame() throws Exception
     {
         //part 2
+        File f = new File("save.txt");
+        PrintWriter stream = new PrintWriter(f);
+        for (int i=0; i!=this.getWidth()*this.getHeight(); i++)
+        {
+            int x = i % this.getWidth();
+            int y = i / this.getWidth();
+            Actor obj = GWorld.getOneObjectAt(x, y, "Actor");
+            if (obj != null)
+            {
+                stream.println(obj.id);
+            }
+            else
+            {
+                stream.println("null");
+            }
+        }
     }
  
     public void loadGame() throws Exception
     {
-        //part 2    
+        //part 2
         
         //clear the board
         removeAllObjects(); // keep this line
-        
         
     } 
     
